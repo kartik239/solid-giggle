@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Act License Application Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card" aria-labelledby="formTitle">
+      <div class="emblem" aria-hidden="true">म</div>
+      <div>
+        <p class="eyebrow">Maharashtra Shops and Establishment Assistance</p>
+        <h1 id="formTitle">Shop Act License Application Form</h1>
+        <p class="subtitle">Fill in your business and personal details below to apply for a New, Renewal, or Modification of your Shop Act License.</p>
+        <p class="subtitle small">Application will be processed under the Maharashtra Shops and Establishment Act with professional assistance.</p>
+      </div>
+    </section>
+
+    <div id="successMessage" class="success-card" role="status" aria-live="polite" hidden>
+      <strong>Your application has been submitted successfully.</strong>
+      <span>Please send your supporting documents on WhatsApp for faster processing.</span>
+    </div>
+
+    <form id="applicationForm" class="form-card" novalidate>
+      <section class="form-section">
+        <h2><span>1</span> Application Type</h2>
+        <div class="radio-group" data-error-for="applicationType">
+          <label><input type="radio" name="applicationType" value="New Application" required> New Application</label>
+          <label><input type="radio" name="applicationType" value="Renewal"> Renewal</label>
+          <label><input type="radio" name="applicationType" value="Modification"> Modification</label>
+        </div>
+        <p class="error" id="applicationTypeError"></p>
+      </section>
+
+      <section class="form-section">
+        <h2><span>2</span> Business Details</h2>
+        <div class="grid two">
+          <div class="field"><label for="businessName">Business Name (आस्थापनेचे नाव)</label><input id="businessName" name="businessName" type="text" required><p class="error" id="businessNameError"></p></div>
+          <div class="field"><label for="businessCity">City</label><input id="businessCity" name="businessCity" type="text" required><p class="error" id="businessCityError"></p></div>
+          <div class="field full"><label for="businessAddress">Complete Address of Business (व्यवसायाचा पूर्ण पत्ता)</label><textarea id="businessAddress" name="businessAddress" rows="4" required></textarea><p class="error" id="businessAddressError"></p></div>
+          <div class="field"><label for="pinCode">PIN Code</label><input id="pinCode" name="pinCode" type="text" inputmode="numeric" maxlength="6" required><p class="error" id="pinCodeError"></p></div>
+          <div class="field"><label for="businessStartDate">Date of Commencement of Business</label><input id="businessStartDate" name="businessStartDate" type="date" required><p class="error" id="businessStartDateError"></p></div>
+          <div class="field"><label for="natureOfBusiness">Nature of Business (व्यवसायाचे स्वरूप)</label><input id="natureOfBusiness" name="natureOfBusiness" type="text" placeholder="Example: Retail Shop, Office, Restaurant" required><p class="error" id="natureOfBusinessError"></p></div>
+          <div class="field"><label for="organizationType">Type of Organization (आस्थापनेचा प्रकार)</label><select id="organizationType" name="organizationType" required><option value="">Select organization type</option><option>Proprietorship (Single Owner)</option><option>Partnership</option><option>LLP</option><option>Private Limited Company</option><option>Public Limited Company</option><option>Trust</option><option>Society</option><option>NGO</option><option>Others</option></select><p class="error" id="organizationTypeError"></p></div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2><span>3</span> Ownership Details</h2>
+        <div class="radio-group"><label><input type="radio" name="ownership" value="Self-Owned" required> Self-Owned</label><label><input type="radio" name="ownership" value="Rented"> Rented</label></div>
+        <p class="error" id="ownershipError"></p>
+      </section>
+
+      <section class="form-section">
+        <h2><span>4</span> Worker Details (कामगार तपशील)</h2>
+        <div class="grid three">
+          <div class="field"><label for="maleWorkers">Male Workers</label><input id="maleWorkers" name="maleWorkers" type="number" min="0" value="0"><p class="error" id="maleWorkersError"></p></div>
+          <div class="field"><label for="femaleWorkers">Female Workers</label><input id="femaleWorkers" name="femaleWorkers" type="number" min="0" value="0"><p class="error" id="femaleWorkersError"></p></div>
+          <div class="field"><label for="totalWorkers">Total Workers</label><input id="totalWorkers" name="totalWorkers" type="number" value="0" readonly></div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2><span>5</span> Employer Details</h2>
+        <div class="grid two">
+          <div class="field"><label for="employerName">Full Name of Employer</label><input id="employerName" name="employerName" type="text" required><p class="error" id="employerNameError"></p></div>
+          <div class="field"><label for="residentialCity">City</label><input id="residentialCity" name="residentialCity" type="text" required><p class="error" id="residentialCityError"></p></div>
+          <div class="field full"><label for="residentialAddress">Residential Address</label><textarea id="residentialAddress" name="residentialAddress" rows="4" required></textarea><p class="error" id="residentialAddressError"></p></div>
+          <div class="field"><label for="zipCode">ZIP / Postal Code</label><input id="zipCode" name="zipCode" type="text" inputmode="numeric" maxlength="6" required><p class="error" id="zipCodeError"></p></div>
+          <div class="field"><label for="residentSince">Resident Since</label><input id="residentSince" name="residentSince" type="number" placeholder="2015" min="1900" required><p class="error" id="residentSinceError"></p></div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2><span>6</span> Identification & Contact Information</h2>
+        <div class="grid two">
+          <div class="field"><label for="aadhaar">Aadhaar Number</label><input id="aadhaar" name="aadhaar" type="text" inputmode="numeric" maxlength="12" required><p class="error" id="aadhaarError"></p></div>
+          <div class="field"><label for="pan">PAN Card Number <em>(Optional)</em></label><input id="pan" name="pan" type="text" maxlength="10" placeholder="ABCDE1234F"><p class="error" id="panError"></p></div>
+          <div class="field"><label for="email">Email ID</label><input id="email" name="email" type="email" required><p class="error" id="emailError"></p></div>
+          <div class="field"><label for="mobile">Mobile Number</label><input id="mobile" name="mobile" type="text" inputmode="numeric" maxlength="10" required><p class="error" id="mobileError"></p></div>
+          <div class="field"><label for="alternateMobile">Alternate Mobile Number <em>(Optional)</em></label><input id="alternateMobile" name="alternateMobile" type="text" inputmode="numeric" maxlength="10"><p class="error" id="alternateMobileError"></p></div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2><span>7</span> Document Submission Note</h2>
+        <div class="info-box"><p>After submitting this form, please send your Aadhaar Card, PAN Card, and Address Proof via WhatsApp for faster processing.</p><a id="whatsappLink" class="whatsapp-button" href="https://wa.me/917066644476" target="_blank" rel="noopener">Send Documents via WhatsApp</a></div>
+      </section>
+
+      <section class="form-section">
+        <h2><span>8</span> Consent & Declaration</h2>
+        <label class="consent"><input id="consent" name="consent" type="checkbox" required><span>I agree with the Privacy Policy, Terms & Conditions, and Refund Policy. I hereby authorize ShopActMaharashtra.com to assist with processing my Shop Act application on my behalf. I confirm that the information provided above is true and correct.</span></label>
+        <p class="error" id="consentError"></p>
+      </section>
+
+      <button id="submitButton" class="submit-button" type="submit"><span class="button-text">Submit Application</span><span class="spinner" aria-hidden="true"></span></button>
+      <p id="formAlert" class="form-alert" role="alert" aria-live="assertive"></p>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
