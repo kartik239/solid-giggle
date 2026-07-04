@@ -1,6 +1,6 @@
 // Replace these values before deployment.
 const CONFIG = {
-  appsScriptUrl: 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE',
+  appsScriptUrl: 'https://script.google.com/macros/s/AKfycbw0C_cDNMQiYeIxw2YYhOL4shZBhOU-Fr9NRpOzPqc3H97w97beYBZkQ-PcU2qLjrmp-g/exec',
   whatsappPhone: '917066644476'
 };
 
