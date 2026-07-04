@@ -1,7 +1,7 @@
 // Replace these values before deployment.
 const CONFIG = {
   appsScriptUrl: 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE',
-  whatsappPhone: '91XXXXXXXXXX'
+  whatsappPhone: '917066644476'
 };
 
 const form = document.getElementById('applicationForm');

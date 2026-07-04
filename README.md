@@ -38,7 +38,7 @@ Create a sheet named `Applications` with these columns in row 1:
 
 1. Open `script.js`.
 2. Replace `PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE` with the Web App URL from Apps Script.
-3. Replace `91XXXXXXXXXX` with the WhatsApp number that should receive documents, including country code and no plus sign.
+3. The default WhatsApp document number is configured as `917066644476`; update it if the receiving number changes, using country code and no plus sign.
 4. Upload `index.html`, `style.css`, and `script.js` to your static hosting provider.
 
 ## Validation and Submission Behavior
